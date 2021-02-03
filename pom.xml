@@ -15,21 +15,24 @@
 	<description>Demo project for Spring Boot using GraphQL</description>
 	<properties>
 		<java.version>1.8</java.version>
+		<graphql.version>11.0.0</graphql.version>
 	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>com.graphql-java</groupId>
-			<artifactId>graphql-spring-boot-starter</artifactId>
-			<version>5.0.2</version>
+			<groupId>com.graphql-java-kickstart</groupId>
+			<artifactId>graphql-java-tools</artifactId>
+			<version>${graphql.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.graphql-java-kickstart</groupId>
-			<artifactId>graphql-java-tools</artifactId>
-			<version>11.0.0</version>
+			<artifactId>playground-spring-boot-starter</artifactId>
+			<version>${graphql.version}</version>
+			<scope>runtime</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
