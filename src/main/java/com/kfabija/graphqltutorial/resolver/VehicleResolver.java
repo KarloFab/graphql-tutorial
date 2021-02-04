@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class VehicleResolver implements GraphQLQueryResolver {
 
-    public Vehicle getVehicle(Long id) {
+    public Vehicle vehicle(Long id) {
         log.info("Retrieving vehicle by id: {}", id);
 
         return Vehicle.builder().id(id).type(VehicleType.CAR).name("VW").build();
