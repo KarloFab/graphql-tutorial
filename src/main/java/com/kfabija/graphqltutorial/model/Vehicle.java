@@ -9,6 +9,5 @@ public class Vehicle {
 
     Long id;
     String name;
-    VehicleType vehicleType;
-
+    VehicleType type;
 }

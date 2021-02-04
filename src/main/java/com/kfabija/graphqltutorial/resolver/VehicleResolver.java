@@ -13,6 +13,6 @@ public class VehicleResolver implements GraphQLQueryResolver {
     public Vehicle getVehicle(Long id) {
         log.info("Retrieving vehicle by id: {}", id);
 
-        return Vehicle.builder().id(id).vehicleType(VehicleType.CAR).name("VW").build();
+        return Vehicle.builder().id(id).type(VehicleType.CAR).name("VW").build();
     }
 }
