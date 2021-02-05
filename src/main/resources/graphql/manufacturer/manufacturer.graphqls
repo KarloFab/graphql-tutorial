@@ -3,3 +3,12 @@ type Manufacturer {
     name: String!
     vehicles: [Vehicle]
 }
+
+type Query {
+    findAllManufactures: [Manufacturer]!
+    countManufactures: Int!
+}
+
+type Mutation {
+    newManufacturer(name: String!): Manufacturer!
+}
