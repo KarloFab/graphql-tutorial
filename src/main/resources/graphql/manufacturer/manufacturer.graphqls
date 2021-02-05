@@ -1,0 +1,5 @@
+type Manufacturer {
+    id: ID!
+    name: String!
+    vehicles: [Vehicle]
+}
