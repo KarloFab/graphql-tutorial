@@ -7,8 +7,9 @@ import com.kfabija.graphqltutorial.repository.VehicleRepository;
 import graphql.kickstart.tools.GraphQLQueryResolver;
 
 public class Query implements GraphQLQueryResolver {
-    private VehicleRepository vehicleRepository;
-    private ManufacturerRepository manufacturerRepository;
+
+    private final VehicleRepository vehicleRepository;
+    private final ManufacturerRepository manufacturerRepository;
 
     public Query(VehicleRepository vehicleRepository, ManufacturerRepository manufacturerRepository) {
         this.vehicleRepository = vehicleRepository;
