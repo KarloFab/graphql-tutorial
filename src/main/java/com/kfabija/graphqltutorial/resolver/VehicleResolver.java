@@ -1,18 +1,16 @@
 package com.kfabija.graphqltutorial.resolver;
 
 import com.kfabija.graphqltutorial.model.Vehicle;
-import com.kfabija.graphqltutorial.model.VehicleType;
-import graphql.kickstart.tools.GraphQLQueryResolver;
-import lombok.extern.slf4j.Slf4j;
+import com.kfabija.graphqltutorial.repository.VehicleRepository;
+import graphql.kickstart.tools.GraphQLResolver;
 import org.springframework.stereotype.Component;
 
-@Slf4j
 @Component
-public class VehicleResolver implements GraphQLQueryResolver {
+public class VehicleResolver implements GraphQLResolver<Vehicle> {
 
-    public Vehicle vehicle(Long id) {
-        log.info("Retrieving vehicle by id: {}", id);
+    private VehicleRepository vehicleRepository;
 
-        return Vehicle.builder().id(id).type(VehicleType.CAR).name("VW").build();
+    public VehicleResolver(VehicleRepository vehicleRepository) {
+        this.vehicleRepository = vehicleRepository;
     }
 }
