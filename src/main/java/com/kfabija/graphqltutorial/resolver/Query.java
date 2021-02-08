@@ -5,7 +5,9 @@ import com.kfabija.graphqltutorial.model.Vehicle;
 import com.kfabija.graphqltutorial.repository.ManufacturerRepository;
 import com.kfabija.graphqltutorial.repository.VehicleRepository;
 import graphql.kickstart.tools.GraphQLQueryResolver;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Query implements GraphQLQueryResolver {
 
     private final VehicleRepository vehicleRepository;

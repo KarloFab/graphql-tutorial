@@ -5,9 +5,11 @@ import com.kfabija.graphqltutorial.model.*;
 import com.kfabija.graphqltutorial.repository.ManufacturerRepository;
 import com.kfabija.graphqltutorial.repository.VehicleRepository;
 import graphql.kickstart.tools.GraphQLMutationResolver;
+import org.springframework.stereotype.Component;
 
 import java.util.Optional;
 
+@Component
 public class Mutation implements GraphQLMutationResolver {
 
     private final VehicleRepository vehicleRepository;
