@@ -1,9 +1,7 @@
 package com.kfabija.graphqltutorial.resolver;
 
 import com.kfabija.graphqltutorial.exception.VehicleNotFoundException;
-import com.kfabija.graphqltutorial.model.Manufacturer;
-import com.kfabija.graphqltutorial.model.Vehicle;
-import com.kfabija.graphqltutorial.model.VehicleType;
+import com.kfabija.graphqltutorial.model.*;
 import com.kfabija.graphqltutorial.repository.ManufacturerRepository;
 import com.kfabija.graphqltutorial.repository.VehicleRepository;
 import graphql.kickstart.tools.GraphQLMutationResolver;
