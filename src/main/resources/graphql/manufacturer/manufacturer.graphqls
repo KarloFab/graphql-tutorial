@@ -1,3 +1,5 @@
+scalar Long
+
 type Manufacturer {
     id: ID!
     name: String!
@@ -6,9 +8,9 @@ type Manufacturer {
 
 type Query {
     findAllManufactures: [Manufacturer]!
-    countManufactures: Int!
+    countManufacturers: Long!
 }
 
 type Mutation {
-    newManufacturer(name: String!): Manufacturer!
+    createManufacturer(name: String!): Manufacturer!
 }
