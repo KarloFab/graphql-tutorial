@@ -18,8 +18,16 @@ public class Query implements GraphQLQueryResolver {
         this.manufacturerRepository = manufacturerRepository;
     }
 
+    public Iterable<Vehicle> findAllVehicles(){
+        return vehicleRepository.findAll();
+    }
+
     public Iterable<Manufacturer> findAllManufactures(){
         return manufacturerRepository.findAll();
+    }
+
+    public long countVehicles() {
+        return vehicleRepository.count();
     }
 
     public long countManufacturers(){

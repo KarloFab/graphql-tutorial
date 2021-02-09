@@ -4,3 +4,12 @@ type Vehicle {
     type: VehicleType!
     manufacturer: Manufacturer!
 }
+
+extend type Query {
+    findAllVehicles: [Vehicle]!
+    countVehicles: Long!
+}
+
+extend type Mutation {
+    createVehicle(name: String!, type: String!): Vehicle!
+}
